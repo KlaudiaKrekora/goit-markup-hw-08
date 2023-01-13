@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $brand-font;
+}
+
+.section {
+    padding: 94px 0;
+}
+
+
+.header {
+    border-bottom: 1px solid #ececec;
+}
+
+.section__heading {
+    font-size: 36px;
+    font-weight: 700;
+    color: $secondary-color;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-align: center;
+    margin: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    &--footer {
+        gap: 70px;
+        display: flex;
+    }
+}

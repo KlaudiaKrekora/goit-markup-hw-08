@@ -1,0 +1,28 @@
+.contacts {
+    @extend %flex-sb;
+    color: $secondary-color;
+    list-style-type: none;
+    gap: 30px;
+    margin: 0;
+    padding-left: 0;
+    
+
+    &__link {
+        display: flex;
+        text-decoration: none;
+        color: $brand-color;
+        flex-wrap: nowrap;
+        align-items: center;
+        transition: color $transition;
+    }
+
+    &__link:hover,
+    &__link:focus {
+        color: $main-brand-color;
+    }
+
+    &__icon {
+        margin-right: 10px;
+        fill: currentColor;
+    }
+}

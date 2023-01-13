@@ -1,0 +1,79 @@
+.team {
+    background: $section-background-color;
+    margin-top: 0;
+
+    &__list {
+        list-style-type: none;
+        @extend %flex-sb;
+        padding-left: 0;
+        flex-wrap: wrap;
+        margin-top: 50px;
+        margin-bottom: 0;
+    }
+}
+
+.team-member {
+    background: $complementary-color;
+    box-shadow: 0px 1px 3px $box-shadow-second, 0px 1px 1px $box-shadow-third,
+        0px 2px 1px $box-shadow-darker;
+    max-width: 270px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 2%;
+    margin: 0;
+
+    &__name {
+        font-size: 16px;
+        font-weight: 500;
+        color: $secondary-color;
+        line-height: 1.17;
+        letter-spacing: 0.03em;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    &__img {
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 40px;
+        margin-inline-end: 40px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    &__job {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.17;
+        letter-spacing: 0.03em;
+        text-align: center;
+        color: $brand-color;
+        margin-bottom: 15px;
+        margin-top: 10px;
+    }
+
+    &__socials {
+        list-style: none;
+        display: flex;
+        gap: 10px;
+        margin-bottom: 30px;
+    }
+
+    &__link {
+        fill: $icon-color;
+        border-radius: 50%;
+        display: block;
+        padding: 12px;
+        font-size: 0;
+        transition: $transition;
+        transition-property: background-color fill;
+
+        &:hover,
+        &:focus {
+            fill: $complementary-color;
+            background-color: $main-brand-color;
+        }
+    }
+}

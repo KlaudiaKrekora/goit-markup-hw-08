@@ -1,0 +1,47 @@
+.hero {
+    background-color: $main-background-color;
+    padding: 200px 0;
+    background-image: linear-gradient(
+        $gradient-transparent-color,
+        $gradient-transparent-color
+        ),
+        url('../images/hero-image.jpg');
+
+    background-repeat: no-repeat;
+    background-position: center;
+    max-width: 1600px;
+    margin: 0 auto;
+   
+
+    &__heading {
+        color: $complementary-color;
+        text-transform: uppercase;
+        font-weight: 900;
+        font-size: 44px;
+        line-height: 1.36;
+        letter-spacing: 0.06em;
+        margin-bottom: 30px;
+        max-width: 696px;
+        
+    }
+    &__btn {
+        display: block;
+        cursor: pointer;
+        color: $complementary-color;
+        background-color: $main-brand-color;
+        border: none;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.88;
+        letter-spacing: 0.06em;
+        padding: 10px 41px 10px 42px;
+        border-radius: 4px;
+    }
+    &__content {
+        margin: 0 auto;
+        max-width: 1600px;
+        flex-direction: column;
+        text-align: center;
+        @extend %flex-center
+    }
+}

@@ -1,0 +1,31 @@
+.about-us {
+    list-style-type: none;
+   @extend %flex-sb;
+    padding-left: 0;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+    margin-top: 50px;
+
+    &__image {
+        width: 100%;
+        display: block;
+    }
+
+    &__hero {
+        position: absolute;
+        bottom: 0;
+        background-color: $projects-label;
+        color: $complementary-color;
+        width: 100%;
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+        text-align: center;
+        padding: 27px 0;
+    }
+
+    &__item {
+        position: relative;
+    }
+}

@@ -1,0 +1,26 @@
+.logo {
+    font-size: 26px;
+    font-weight: 700;
+    font-family: $logo-font;
+    color: $logo-color;
+    text-decoration: none;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    align-items: center;
+    margin-right: 93px;
+    max-width: 145px;
+
+    &--accent {
+        color: $main-brand-color;
+    }
+}
+
+.logo--alternative {
+    font-size: 26px;
+    font-weight: 700;
+    font-family: $logo-font;
+    color: $complementary-color;
+    text-decoration: none;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+}
