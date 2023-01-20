@@ -1,11 +1,12 @@
-.filter {
-    list-style-type: none;
-    @extend %flex-center;
-    gap: 8px;
-    padding-left: 0;
-    margin-bottom: 50px;
-    margin-top: 0;
-
+.portfolio-filter {
+    &__list {
+        list-style-type: none;
+        @extend %flex-center;
+        gap: 8px;
+        padding-left: 0;
+        margin-bottom: 50px;
+        margin-top: 0;
+    }
     &__btn {
         cursor: pointer;
         color: $secondary-color;

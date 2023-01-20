@@ -9,6 +9,16 @@
         flex-wrap: wrap;
         margin-top: 50px;
         margin-bottom: 0;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    &__item:not(:last-child) {
+        margin-bottom: 30px;
+    }
+
+    &__heading {
+        @extend %section__heading;
     }
 }
 
@@ -16,10 +26,7 @@
     background: $complementary-color;
     box-shadow: 0px 1px 3px $box-shadow-second, 0px 1px 1px $box-shadow-third,
         0px 2px 1px $box-shadow-darker;
-    max-width: 270px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
     border-radius: 2%;
     margin: 0;
 
@@ -35,22 +42,20 @@
 
     &__img {
         display: block;
-        margin-block-start: 1em;
-        margin-block-end: 1em;
-        margin-inline-start: 40px;
-        margin-inline-end: 40px;
-        margin-top: 0;
-        margin-bottom: 0;
+        width: 100%;
+    }
+
+    &__text {
+        margin-top: 30px;
+        text-align: center;
+        font-size: 16px;
     }
 
     &__job {
-        font-size: 16px;
         font-weight: 400;
         line-height: 1.17;
         letter-spacing: 0.03em;
-        text-align: center;
         color: $brand-color;
-        margin-bottom: 15px;
         margin-top: 10px;
     }
 
@@ -58,9 +63,9 @@
         list-style: none;
         display: flex;
         gap: 10px;
-        margin-bottom: 30px;
+        padding: 16px 0 24px;
+        justify-content: center;
     }
-
     &__link {
         fill: $icon-color;
         border-radius: 50%;
@@ -74,6 +79,55 @@
         &:focus {
             fill: $complementary-color;
             background-color: $main-brand-color;
+        }
+    }
+}
+
+@media (width >= 768px) {
+    .team {
+        &-member {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 354px;
+            &__text {
+                margin-top: 0;
+            }
+        }
+
+        &__item:not(:last-child) {
+            margin-bottom: 0;
+        }
+
+        &__list {
+            gap: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+}
+
+@media (width >= 1200px) {
+    .team {
+        &__heading {
+            margin: 0 auto 50px;
+            font-size: 36px;
+        }
+
+        &-member {
+            display: flex;
+            justify-content: center;
+            max-width: 270px;
+
+            &__text {
+                margin-top: 0;
+            }
+        }
+
+        &__list {
+            gap: 30px;
+            justify-content: space-between;
         }
     }
 }

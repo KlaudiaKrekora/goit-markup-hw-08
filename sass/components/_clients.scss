@@ -1,7 +1,15 @@
 .clients {
-    @extend %flex-sb;
-    list-style: none;
-    margin-top: 50px;
+    &__list {
+        @extend %flex-sb;
+        list-style: none;
+        margin-top: 50px;
+        gap: 30px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    &__item {
+        flex-basis: calc((100% - 30px) / 2);
+    }
 
     &__logo {
         display: block;
@@ -9,6 +17,7 @@
         border: 1px solid $icon-color;
         border-radius: 4px;
         fill: $icon-color;
+        text-align: center;
         transition: $transition;
         transition-property: fill border-color;
 
@@ -16,6 +25,34 @@
         &:focus {
             fill: $main-brand-color;
             border-color: $main-brand-color;
+        }
+    }
+
+    &__heading {
+        @extend %section__heading;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+}
+
+@media (width >= 768px) {
+    .clients {
+        &__item {
+            flex-basis: calc((100% - 60px) / 3);
+        }
+    }
+}
+
+@media (width >= 1200px) {
+    .clients {
+        &__heading {
+            margin-bottom: 50px;
+            font-size: 36px;
+        }
+        &__item {
+            flex-basis: calc((100% - 150px) / 6);
         }
     }
 }

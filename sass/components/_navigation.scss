@@ -3,10 +3,8 @@
     font-weight: 500;
     line-height: 1.17;
     letter-spacing: 0.02em;
-    @extend %flex-sb;
-    flex-direction: row;   
-    margin: 0;    
-    padding: 24.5px 0;
+    margin: 0;
+    padding-left: 93px;
 
     &__list {
         color: $secondary-color;
@@ -16,7 +14,7 @@
         padding-left: 0;
         font-weight: 500;
         letter-spacing: 0.02em;
-        gap: 46px;
+        gap: 60px;
     }
 
     &__wrapper {
@@ -59,5 +57,17 @@
         border-radius: 2px;
         background-color: $main-brand-color;
         display: block;
+    }
+}
+
+@media (max-width: 767px) {
+    .nav {
+        display: none;
+    }
+}
+
+@media (width >= 767px) {
+    .nav {
+        padding-left: 83px;
     }
 }

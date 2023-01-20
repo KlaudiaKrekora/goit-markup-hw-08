@@ -8,37 +8,120 @@
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
 body {
     font-family: $brand-font;
 }
 
 .section {
-    padding: 94px 0;
+    padding: 60px 0;
 }
-
 
 .header {
     border-bottom: 1px solid #ececec;
+    padding: 10px 0;
+
+    &__menu-toggle {
+        @extend %toggle;
+        position: absolute;
+        top: 5px;
+        right: 15px;
+        color: $brand-color;
+    }
+    &__menu-icon {
+        transition: $transition;
+        &:hover,
+        &:focus {
+            fill: $main-brand-color;
+        }
+    }
+    &__desktop-menu {
+        display: flex;
+    }
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 15px;
+    }
 }
 
-.section__heading {
-    font-size: 36px;
-    font-weight: 700;
-    color: $secondary-color;
-    line-height: 1.17;
-    letter-spacing: 0.03em;
-    text-align: center;
-    margin: 0;
+@media (width >= 480px) {
+    .container__footer {
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media (width >= 768px) {
+    .header {
+        padding: 19px 0;
+
+        &__menu-toggle {
+            display: none;
+        }
+
+        &__desktop-menu {
+            display: flex;
+            align-items: center;
+        }
+    }
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 480px;
     margin: 0 auto;
-    padding-left: 15px;
-    padding-right: 15px;
 
-    &--footer {
-        gap: 70px;
-        display: flex;
+    &__footer {
+        padding: 60px 15px;
+        text-align: center;
+    }
+
+    &__strenghts {
+        padding: 0 15px;
+    }
+}
+
+@media (width >= 768px) {
+    .container {
+        max-width: 768px;
+
+        &__footer {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
+@media (width >= 1200px) {
+    .container {
+        max-width: 1200px;
+
+        &__footer {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+
+    .section--strenghts {
+        padding-bottom: 0;
+    }
+}
+
+@media (width >= 1200px) {
+    .header {
+        padding: 24.5px 0;
+
+        &__desktop-menu {
+            flex-grow: 1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
     }
 }

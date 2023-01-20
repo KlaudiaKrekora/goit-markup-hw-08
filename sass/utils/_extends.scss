@@ -1,11 +1,40 @@
-%flex-center{
+%flex-center {
     display: flex;
-  align-items: center;
-  justify-content: center;
+    align-items: center;
+    justify-content: center;
 }
 
 %flex-sb {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+%toggle {
+    min-height: 40px;
+    min-width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    transition: $transition;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+        color: $main-brand-color;
+    }
+}
+%section__heading {
+    font-size: 36px;
+    font-weight: 700;
+    color: $secondary-color;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-align: center;
+    margin-bottom: 50px;
 }

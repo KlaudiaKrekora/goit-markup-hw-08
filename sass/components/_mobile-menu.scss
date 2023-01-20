@@ -1,0 +1,123 @@
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 48px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: $complementary-color;
+    z-index: 999;
+    transform: translateX(100%);
+    transition: transform 250ms ease-in-out;
+
+    &.is-open {
+        transform: translateX(0);
+    }
+
+    &__toggle {
+        color: $secondary-color;
+        @extend %toggle;
+        position: absolute;
+        top: 10px;
+        right: 15px;
+    }
+
+    &__item {
+        margin-bottom: 36px;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $secondary-color;
+        font-size: 40px;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+
+        &--active {
+            color: $main-brand-color;
+        }
+        &:hover,
+        &:focus {
+            color: $main-brand-color;
+        }
+    }
+}
+
+.mobile-menu .mobile-menu-toggle {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    color: #fff;
+}
+
+@media (min-width: 768px) {
+    .menu-toggle {
+        display: none;
+    }
+}
+
+.mobile-contacts {
+    &__list {
+        font-weight: 500;
+        letter-spacing: 0.02em;
+    }
+    &__item {
+        margin-bottom: 32px;
+
+        // &:last-child {
+        //   margin-bottom: 64px;
+        // }
+    }
+
+    &__phone {
+        font-size: 30px;
+        color: $main-brand-color;
+    }
+
+    &__mail {
+        font-size: 24px;
+        color: $brand-color;
+    }
+}
+
+.mobile-contacts__social {
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px 0;
+    }
+
+    &-item {
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+
+        &--instagram,
+        &--facebook,
+        &--twitter {
+            padding-right: 10px;
+            border-right: 1px solid $border-mobile-menu;
+        }
+
+        &--linkedin {
+            padding-left: 10px;
+            // padding-right: 30px;
+        }
+
+        &--twitter,
+        &--facebook {
+            padding-left: 10px;
+        }
+    }
+
+    &-link {
+        color: $main-brand-color;
+
+        &:last-child {
+            margin-bottom: 48px;
+        }
+    }
+}

@@ -5,9 +5,9 @@
     transition: opacity 250ms 250ms ease-in-out,
         visibility 250ms 250ms ease-in-out;
 
-.modal {
-    transform: translate(-50%, -50%) scale(0.4);
-}
+    .modal {
+        transform: translate(-50%, -50%) scale(0.4);
+    }
 }
 
 .backdrop {
@@ -23,7 +23,7 @@
     position: relative;
     top: 50%;
     left: 50%;
-    max-width: 528px;
+    max-width: 450px;
     background-color: $complementary-color;
     box-shadow: 0px 1px 3px $box-shadow-second, 0px 1px 1px $box-shadow-third,
         0px 2px 1px $box-shadow;
@@ -32,19 +32,19 @@
     transition: transform 1s ease;
     padding: 40px;
 
-    &__btn--close {
+    &__btn-close {
         padding-top: 6px;
         position: absolute;
         top: 8px;
         right: 8px;
         width: 30px;
         height: 30px;
-        border: 1px solid $border-first-color ;
+        border: 1px solid $border-first-color;
         background-color: $complementary-color;
         border-radius: 50%;
         cursor: pointer;
     }
-    
+
     &__heading {
         font-size: 20px;
         font-weight: 700;
@@ -54,7 +54,6 @@
         text-align: center;
         justify-content: center;
         margin-bottom: 12px;
-        white-space: nowrap;
     }
 
     &__btn {
@@ -72,28 +71,32 @@
         cursor: pointer;
         margin: 0 auto;
     }
+    &__form {
+        @extend %flex-center;
+        flex-direction: column;
+        width: 100%;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.01em;
+        margin: 0;
+        transition: fill $transition;
+    }
 }
 
-.modal-form {
-    @extend %flex-center;
-    flex-direction: column;
-    width: 100%;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 1.17;
-    letter-spacing: 0.01em;
+.input-box {
     margin: 0;
+    width: 100%;
     transition: fill $transition;
-    
 
     &__label {
-        margin-bottom: 4px; 
+        margin-bottom: 4px;
         display: block;
         text-align: left;
         font-size: 12px;
         color: $brand-color;
     }
-    &__wrapper--inner {
+    &__inner-box {
         position: relative;
         margin-bottom: 10px;
         height: 40px;
@@ -101,25 +104,25 @@
         &:not(:last-child) {
             margin-bottom: 10px;
         }
-        
+
         &:focus-within {
             fill: $main-brand-color;
         }
     }
-    
+
     &__input {
         border: 1px solid $border-secondary-color;
         border-radius: 4px;
         padding: 12px 0 12px 42px;
         width: 100%;
-        outline: none;    
+        outline: none;
         transition: border-color $transition;
-    
+
         &:focus-within {
             border: 1px solid $main-brand-color;
             outline: none;
         }
-        
+
         &::placeholder {
             font-weight: 400;
             font-size: 12px;
@@ -140,54 +143,46 @@
         padding: 12px 16px;
         resize: none;
     }
-    
-    &__wrapper {
-        margin: 0;
-        width: 100%;
-        transition: fill $transition;
-    }
 }
 
 .declaration {
-    margin: 20px 0 30px 0 ;    
-    @extend %flex-center;    
-    
+    &__label {
+        margin: 20px 0 30px 0;
+        @extend %flex-sb;
+    }
+
     &__checkbox {
-    opacity: 0;
-    position: absolute;
-       
-
-    &--inactive {
+        opacity: 0;
         position: absolute;
-    }
-    
-    &--active{
-        visibility: hidden;
+
+        &-inactive {
+            position: absolute;
+        }
+
+        &-active {
+            visibility: hidden;
+        }
     }
 }
-}
 
-
-.declaration__checkbox:checked + .declaration__checkbox--inactive {
+.declaration__checkbox:checked + .declaration__checkbox-inactive {
     opacity: 0;
 }
 
-.declaration__checkbox:checked ~ .declaration__checkbox--active {
+.declaration__checkbox:checked ~ .declaration__checkbox-active {
     visibility: visible;
 }
 
-
 .declaration-statement {
     font-weight: 400;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: $brand-color;
     text-align: center;
     margin-left: 7px;
 
-&__link {
-    color: $main-brand-color;
+    &__link {
+        color: $main-brand-color;
+    }
 }
-}
-
