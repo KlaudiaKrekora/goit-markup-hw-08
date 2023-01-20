@@ -2,25 +2,26 @@
     font-size: 26px;
     font-weight: 700;
     font-family: $logo-font;
-    color: $logo-color;
-    text-decoration: none;
     line-height: 1.17;
     letter-spacing: 0.03em;
     align-items: center;
-    margin-right: 93px;
     max-width: 145px;
+    text-decoration: none;
+    color: $logo-color;
 
     &--accent {
         color: $main-brand-color;
+        margin-right: 0;
+    }
+
+    &--alternative {
+        color: $complementary-color;
+        text-decoration: none;
     }
 }
 
-.logo--alternative {
-    font-size: 26px;
-    font-weight: 700;
-    font-family: $logo-font;
-    color: $complementary-color;
-    text-decoration: none;
-    line-height: 1.17;
-    letter-spacing: 0.03em;
+@media (width >= 1200px) {
+    .logo {
+        font-size: 26px;
+    }
 }

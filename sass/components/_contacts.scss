@@ -2,10 +2,6 @@
     @extend %flex-sb;
     color: $secondary-color;
     list-style-type: none;
-    gap: 30px;
-    margin: 0;
-    padding-left: 0;
-    
 
     &__link {
         display: flex;
@@ -14,6 +10,11 @@
         flex-wrap: nowrap;
         align-items: center;
         transition: color $transition;
+        align-items: center;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+        line-height: 1.17;
     }
 
     &__link:hover,
@@ -24,5 +25,80 @@
     &__icon {
         margin-right: 10px;
         fill: currentColor;
+    }
+}
+
+@media (max-width: 767px) {
+    .contacts {
+        display: none;
+    }
+}
+
+.contacts {
+    &__item {
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+        color: $brand-color;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+    }
+
+    &__icon {
+        margin-right: 8px;
+        --color4: currentColor;
+    }
+}
+
+@media (1200px > width >= 768px) {
+    .contacts {
+        &__list {
+            margin-left: 101px;
+            display: block;
+        }
+
+        &__link {
+            font-size: 12px;
+
+            &--mail {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+@media (width >= 1200px) {
+    .header {
+        padding: 25px 0;
+
+        &__desktop-menu {
+            flex-grow: 1;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    .nav__list {
+        gap: 46px;
+    }
+
+    .contacts {
+        &__list {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+            padding-right: 15px;
+        }
+
+        &__item {
+            font-size: 14px;
+        }
+
+        &__icon {
+            margin-right: 10px;
+        }
     }
 }
