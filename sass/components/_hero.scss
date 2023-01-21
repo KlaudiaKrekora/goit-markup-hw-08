@@ -1,15 +1,18 @@
 .hero {
     background-color: $main-background-color;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(
+            $gradient-transparent-color,
+            $gradient-transparent-color
+        ),
+        url('../images/hero-img-m@1x.jpg');
+
+    background-position: center;
+    background-size: 480px 400px;
 
     &__content {
-        background-image: linear-gradient(
-                $gradient-transparent-color,
-                $gradient-transparent-color
-            ),
-            url('../images/hero-img-m@1x.jpg');
-
-        background-position: center;
-        background-size: 480px 400px;
         padding: 118px 40px;
         text-align: center;
     }
@@ -49,7 +52,7 @@
     }
 }
 
-@media (width >= 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
     .hero {
         &__content {
             padding: 118px 201px;
@@ -63,10 +66,10 @@
     }
 }
 
-@media (width >= 768px) and(min-device-pixel-ratio: 2),
-    (width >= 768px) and (min-resolution: 192dpi),
-    (width >= 768px) and (min-resolution: 2dppx) {
-    .hero__content {
+@media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
         background-image: linear-gradient(
                 $gradient-transparent-color,
                 $gradient-transparent-color
@@ -75,7 +78,7 @@
     }
 }
 
-@media (width >= 1200px) {
+@media screen and (width >= 1200px) {
     .hero {
         &__content {
             display: flex;
@@ -101,10 +104,10 @@
     }
 }
 
-@media (width >= 1200px) and(min-device-pixel-ratio: 2),
-    (width >= 1200px) and(min-resolution: 192dpi),
-    (width >= 1200px) and (min-resolution: 2dppx) {
-    .hero__content {
+@media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
         background-image: linear-gradient(
                 $gradient-transparent-color,
                 $gradient-transparent-color
