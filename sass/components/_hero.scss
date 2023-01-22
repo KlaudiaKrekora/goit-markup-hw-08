@@ -1,4 +1,5 @@
 .hero {
+    height: 400px;
     background-color: $main-background-color;
     background-size: cover;
     background-position: center;
@@ -7,14 +8,16 @@
             $gradient-transparent-color,
             $gradient-transparent-color
         ),
-        url('../images/hero-img-m@1x.jpg');
-
-    background-position: center;
-    background-size: 480px 400px;
+        url('../images/hero-img-m@2x.jpg');
 
     &__content {
-        padding: 118px 40px;
+        padding: 126px 0;
         text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        flex-direction: column;
     }
 
     &__heading {
@@ -25,6 +28,7 @@
         line-height: 1.62;
         letter-spacing: 0.06em;
         margin-bottom: 30px;
+        max-width: 365px;
     }
     &__btn {
         cursor: pointer;
@@ -43,7 +47,7 @@
 @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-    .hero__content {
+    .hero {
         background-image: linear-gradient(
                 $gradient-transparent-color,
                 $gradient-transparent-color
@@ -54,19 +58,16 @@
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
     .hero {
-        &__content {
-            padding: 118px 201px;
-            background-image: linear-gradient(
-                    $gradient-transparent-color,
-                    $gradient-transparent-color
-                ),
-                url('../images/hero-img-t@1x.jpg');
-            background-size: 768px 400px;
-        }
+        background-size: cover;
+        background-image: linear-gradient(
+                $gradient-transparent-color,
+                $gradient-transparent-color
+            ),
+            url('../images/hero-img-t@1x.jpg');
     }
 }
 
-@media screen and (min-device-pixel-ratio: 2),
+@media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     .hero {
@@ -80,26 +81,21 @@
 
 @media screen and (width >= 1200px) {
     .hero {
-        &__content {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 200px 0;
-            margin: 0 auto;
-            max-width: 1600px;
-            flex-direction: column;
-            background-image: linear-gradient(
-                    $gradient-transparent-color,
-                    $gradient-transparent-color
-                ),
-                url('../images/hero-img-d@1x.jpg');
-            background-size: 1600px 600px;
-        }
+        height: 600px;
+        background-size: cover;
+        background-image: linear-gradient(
+                $gradient-transparent-color,
+                $gradient-transparent-color
+            ),
+            url('../images/hero-img-d@1x.jpg');
 
         &__heading {
             max-width: 696px;
             font-size: 44px;
             line-height: 1.36;
+        }
+        &__content {
+            padding: 200px 0px;
         }
     }
 }

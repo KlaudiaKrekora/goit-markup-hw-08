@@ -26,13 +26,12 @@ body {
 
 .header {
     border-bottom: 1px solid #ececec;
-    padding: 10px 0;
+    padding: 14.5px;
+    align-items: center;
 
     &__menu-toggle {
         @extend %toggle;
-        position: absolute;
         top: 5px;
-        right: 15px;
         color: $brand-color;
     }
     &__menu-icon {
@@ -48,7 +47,19 @@ body {
     &__container {
         display: flex;
         justify-content: space-between;
-        padding-left: 15px;
+        align-items: center;
+    }
+}
+.container {
+    margin: 0 auto;
+
+    &__footer {
+        padding: 60px 15px;
+        text-align: center;
+    }
+
+    &__strenghts {
+        padding: 0 15px;
     }
 }
 
@@ -60,7 +71,7 @@ body {
 }
 @media (width >= 768px) {
     .header {
-        padding: 19px 0;
+        padding: 19px;
 
         &__menu-toggle {
             display: none;
@@ -70,20 +81,10 @@ body {
             display: flex;
             align-items: center;
         }
-    }
-}
-
-.container {
-    max-width: 480px;
-    margin: 0 auto;
-
-    &__footer {
-        padding: 60px 15px;
-        text-align: center;
-    }
-
-    &__strenghts {
-        padding: 0 15px;
+        &__container {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
     }
 }
 
@@ -119,9 +120,11 @@ body {
 
         &__desktop-menu {
             flex-grow: 1;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        }
+
+        &__container {
+            padding-left: 15px;
+            padding-right: 15px;
         }
     }
 }

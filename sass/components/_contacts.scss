@@ -56,7 +56,7 @@
 @media (1200px > width >= 768px) {
     .contacts {
         &__list {
-            margin-left: 101px;
+            justify-content: right;
             display: block;
         }
 
@@ -71,26 +71,12 @@
 }
 
 @media (width >= 1200px) {
-    .header {
-        padding: 25px 0;
-
-        &__desktop-menu {
-            flex-grow: 1;
-            display: flex;
-            justify-content: space-between;
-        }
-    }
-    .nav__list {
-        gap: 46px;
-    }
-
     .contacts {
         &__list {
             display: flex;
             align-items: center;
             justify-content: space-between;
             gap: 30px;
-            padding-right: 15px;
         }
 
         &__item {

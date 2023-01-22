@@ -33,7 +33,7 @@
     padding: 40px;
 
     &__btn-close {
-        padding-top: 6px;
+        padding-top: 4px;
         position: absolute;
         top: 8px;
         right: 8px;
@@ -43,6 +43,12 @@
         background-color: $complementary-color;
         border-radius: 50%;
         cursor: pointer;
+        transition: $transition;
+
+        &:hover,
+        &:focus {
+            fill: $main-brand-color;
+        }
     }
 
     &__heading {
@@ -184,5 +190,11 @@
 
     &__link {
         color: $main-brand-color;
+    }
+}
+
+@media (width >= 1200px) {
+    .modal {
+        max-width: 528px;
     }
 }

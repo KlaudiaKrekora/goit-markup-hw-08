@@ -82,6 +82,8 @@
     flex-direction: column;
     padding-top: 12px;
     margin-top: 60px;
+    justify-content: center;
+    align-items: center;
 
     &__input {
         background-color: transparent;
@@ -172,7 +174,7 @@
         margin-top: 60px;
     }
     .newsletter__input {
-        margin: 0 auto 20px;
+        margin: 0 auto;
     }
 }
 
@@ -195,6 +197,8 @@
     }
 
     .newsletter {
+        align-items: flex-start;
+        justify-content: left;
         padding-top: 12px;
         margin-top: 0;
 

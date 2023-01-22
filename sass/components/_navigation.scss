@@ -4,7 +4,6 @@
     line-height: 1.17;
     letter-spacing: 0.02em;
     margin: 0;
-    padding-left: 93px;
 
     &__list {
         color: $secondary-color;
@@ -68,6 +67,15 @@
 
 @media (width >= 767px) {
     .nav {
-        padding-left: 83px;
+        margin-left: 83px;
+    }
+}
+
+@media (width >= 1200px) {
+    .nav {
+        margin-left: 93px;
+        &__list {
+            gap: 46px;
+        }
     }
 }
