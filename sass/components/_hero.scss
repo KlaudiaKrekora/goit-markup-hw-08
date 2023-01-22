@@ -11,7 +11,7 @@
         url('../images/hero-img-m@2x.jpg');
 
     &__content {
-        padding: 126px 0;
+        padding: 97px 0;
         text-align: center;
         display: flex;
         align-items: center;
@@ -55,7 +55,11 @@
             url('../images/hero-img-m@2x.jpg');
     }
 }
-
+@media screen and (min-width: 394px) and (max-width: 768px) {
+    .hero__content {
+        padding: 118px 0;
+    }
+}
 @media screen and (min-width: 768px) and (max-width: 1199px) {
     .hero {
         background-size: cover;
@@ -64,6 +68,10 @@
                 $gradient-transparent-color
             ),
             url('../images/hero-img-t@1x.jpg');
+
+        &__content {
+            padding: 118px 0;
+        }
     }
 }
 
